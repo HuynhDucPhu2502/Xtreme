@@ -3,66 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../CSS/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
-      <a href="#" class="navbar-brand fw-bold text-white">
-        <img
-          src="../Image/musicIcon.svg"
-          alt="musicIcon"
-          class="img-fluid"
-          style="width: 30px"
-        />
-        Xtreme Music
-      </a>
-      <button
-        class="navbar-toggler bg-primary"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupport"
+    <section class="py-2" id="top">
+      <div
+        class="container d-flex justify-content-between align-items-center text-light"
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupport">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a href="" class="nav-link text-white active">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white">Music</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white">Playlist</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white">Artists</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-white">Media</a>
-          </li>
-        </ul>
-        <form class="d-flex ms-auto">
-          <input type="search" class="form-control" />
-          <button class="btn btn-outline-info text-info ms-1" type="submit">
-            Search
+        <div>
+          <a href="mailto:huynhducphu2502@gmail.com" class="link-light"
+            >Support</a
+          >
+        </div>
+        <div class="d-flex w-50 justify-content-center">
+          <input
+            type="search"
+            class="form-control w-50 bg-transparent"
+            id="searchInput"
+          />
+          <button class="btn btn-light bg-transparent" id="searchBtn">
+            <img
+              src="../Image/searchIcon.svg"
+              alt="search icon"
+              id="searchIcon"
+            />
           </button>
-        </form>
+        </div>
+        <div>
+          <button
+            class="btn btn-warning"
+            id="signBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#signForm"
+          >
+            Sign in / Sign up
+          </button>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 fs-5">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="../Image/logoIcon.png" alt="logo icon" id="musicIcon" />
+          <span class="text-light fw-bold ms-1">Xtreme</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <ul class="navbar-nav ms-lg-5">
+            <li class="nav-item me-3">
+              <a href="" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item me-3"><a href="" class="nav-link">Music</a></li>
+            <li class="nav-item me-3">
+              <a href="" class="nav-link">Artists</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="" class="nav-link">Playlists</a>
+            </li>
+            <li class="nav-item me-3"><a href="" class="nav-link">News</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div class="container-fluid text-white">
-      <section id="introduce" class="mt-5">
+    <section class="mt-5">
+      <div class="container bg-dark text-light rounded p-4">
         <div class="row">
-          <div class="col-lg-6">
-            <img src="../Image/listenToMusic.jpg" class="img-fluid" />
-          </div>
-          <div class="col-lg-6">
-            <h2>About</h2>
-            <p>
+          <div class="col-12 col-lg-8">
+            <h1 class="display-1 fw-bolder fst-italic">MUSIC TO EXTREME</h1>
+            <p class="lead" style="text-align: justify">
               Xtreme is a cutting-edge music platform tailored for those who
               seek to explore and redefine their musical tastes. This platform
               stands out by offering users an unparalleled journey through a
@@ -77,12 +96,20 @@
               exploration knows no bounds.
             </p>
           </div>
+          <div class="col-12 col-lg-4 d-flex align-items-center">
+            <img
+              src="../Image/listenToMusic.jpg"
+              alt="introduce Img"
+              class="img-fluid"
+            />
+          </div>
         </div>
-      </section>
-
-      <section class="mt-5">
-        <h2 class="mb-3">Features</h2>
-        <div class="row g2">
+      </div>
+    </section>
+    <section class="mt-5">
+      <div class="container">
+        <h1 class="display-1 fw-bolder mb-3 text-light">Features</h1>
+        <div class="row g-2">
           <div class="col-lg-3 col-6">
             <figure class="figure">
               <img
@@ -90,7 +117,9 @@
                 class="figure-img img-fluid rounded"
                 alt="..."
               />
-              <figcaption class="figure-caption text-white text-center">
+              <figcaption
+                class="figure-caption text-white text-center fw-bolder"
+              >
                 Discovery and Personalized Recommendations
               </figcaption>
             </figure>
@@ -102,7 +131,9 @@
                 class="figure-img img-fluid rounded"
                 alt="..."
               />
-              <figcaption class="figure-caption text-white text-center">
+              <figcaption
+                class="figure-caption text-white text-center fw-bolder"
+              >
                 Custom and Automated Playlists
               </figcaption>
             </figure>
@@ -114,7 +145,9 @@
                 class="figure-img img-fluid rounded"
                 alt="..."
               />
-              <figcaption class="figure-caption text-white text-center">
+              <figcaption
+                class="figure-caption text-white text-center fw-bolder"
+              >
                 High-Quality Sound
               </figcaption>
             </figure>
@@ -126,16 +159,19 @@
                 class="figure-img img-fluid rounded"
                 alt="..."
               />
-              <figcaption class="figure-caption text-white text-center">
+              <figcaption
+                class="figure-caption text-white text-center fw-bolder"
+              >
                 Integration with Other Devices and Services
               </figcaption>
             </figure>
           </div>
         </div>
-      </section>
-
-      <section class="mt-3" id="famousArtists">
-        <h2 class="mb-3">Details</h2>
+      </div>
+    </section>
+    <section class="mt-5" id="famousArtists">
+      <div class="container text-light">
+        <h1 class="display-1 fw-bolder mb-3 text-light">Details</h1>
         <div
           class="carousel slide"
           data-bs-ride="carousel"
@@ -197,45 +233,159 @@
             data-bs-target="#famousArtistsCarousel"
           ></button>
         </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
     <footer class="bg-dark mt-3 text-white d-flex align-items-center py-3">
       <div class="container">
-        <div class="row g-3 align-items-center justify-content-center justify-content-lg-start">
+        <div
+          class="row g-3 align-items-center justify-content-center justify-content-lg-start"
+        >
           <div class="col-lg-3 col-6 d-flex align-items-center">
-            <img src="../Image/facebookIcon.svg" alt="" class="img-fluid me-2" height="30px" width="30px">
+            <img
+              src="../Image/facebookIcon.svg"
+              alt=""
+              class="img-fluid me-2"
+              height="30px"
+              width="30px"
+            />
             <h4 class="d-inline-block mb-0 text-primary">Facebook</h4>
           </div>
           <div class="col-lg-3 col-6 d-flex align-items-center">
-            <img src="../Image/instagramIcon.svg" alt="" class="img-fluid me-2" height="30px" width="30px">
+            <img
+              src="../Image/instagramIcon.svg"
+              alt=""
+              class="img-fluid me-2"
+              height="30px"
+              width="30px"
+            />
             <h4 class="d-inline-block mb-0 text-warning">Instagam</h4>
           </div>
           <div class="col-lg-3 col-6 d-flex align-items-center">
-            <img src="../Image/youtubeIcon.png" alt="" class="img-fluid me-2" height="30px" width="30px">
+            <img
+              src="../Image/youtubeIcon.png"
+              alt=""
+              class="img-fluid me-2"
+              height="30px"
+              width="30px"
+            />
             <h4 class="d-inline-block mb-0 text-danger">Youtube</h4>
           </div>
           <div class="col-lg-3 col-6 d-flex align-items-center">
-            <img src="../Image/xIcon.png" alt="" class="img-fluid me-2" height="30px" width="30px">
+            <img
+              src="../Image/xIcon.png"
+              alt=""
+              class="img-fluid me-2"
+              height="30px"
+              width="30px"
+            />
             <h4 class="d-inline-block mb-0 text-light">X</h4>
           </div>
         </div>
       </div>
     </footer>
-    <style>
-      body {
-        background-color: var(--bs-gray-800);
-      }
 
-      section {
-        width: 80%;
-        margin: auto;
-      }
+    <!-- modal: signForm -->
+    <div class="modal fade" id="signForm">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#signInForm"
+                >
+                  Sign In
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#signUpForm"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="signInForm">
+                <form>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          id="emailSignIn"
+                          class="form-control"
+                        />
+                        <label for="emailSignIn">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="passwordSignIn"
+                          class="form-control"
+                        />
+                        <label for="passwordSignIn">Password</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-success mt-3 w-100" type="submit">
+                    Sign in
+                  </button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="signUpForm">
+                <form>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          id="emailSignUp"
+                          class="form-control"
+                        />
+                        <label for="emailSignUp">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="passwordSignUp"
+                          class="form-control"
+                        />
+                        <label for="passwordSignUp">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="fullNameSignUp"
+                          class="form-control"
+                        />
+                        <label for="fullNameSignUp">Fullname</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-3 w-100" type="submit">
+                    Sign up
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      #introduce p {
-        text-align: justify;
-      }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

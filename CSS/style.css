@@ -1,0 +1,35 @@
+body {
+    background-color: var(--bs-gray-800);
+}
+
+#top {
+    background-color: var(--bs-gray-700);
+}
+
+nav {
+    background-color: var(--bs-gray-900);
+}
+
+#signBtn {
+    background-color: #E6D056;
+}
+
+#searchIcon, #musicIcon {
+    width: 24px;
+}
+
+#searchInput {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+}
+
+#searchBtn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    border-left: none;
+}

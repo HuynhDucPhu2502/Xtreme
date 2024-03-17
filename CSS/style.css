@@ -33,3 +33,10 @@ nav {
     border-bottom-right-radius: 50rem;
     border-left: none;
 }
+
+.fixed-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

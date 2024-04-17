@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/util.css">
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- top bar -->
+  <section class="py-2" id="top">
+    <div class="container d-flex justify-content-between align-items-center text-light">
+      <div>
+        <a href="mailto:huynhducphu2502@gmail.com" class="link-light">Support</a>
+      </div>
+      <div>
+        <button class="btn btn-warning" id="signBtn" data-bs-toggle="modal" data-bs-target="#signForm">
+          Sign in / Sign up
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 fs-5">
+    <div class="container-fluid">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="../Image/HeaderFooter/logoIcon.png" alt="logo icon" id="musicIcon" />
+        <span class="text-light fw-bold ms-1">Xtreme</span>
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarItems">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarItems">
+        <ul class="navbar-nav ms-lg-5">
+          <li class="nav-item me-3">
+            <a href="../HTML/index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item me-3">
+            <a href="../HTML/music.html" class="nav-link">Music</a>
+          </li>
+          <li class="nav-item me-3">
+            <a href="../HTML/tour.html" class="nav-link">Tour</a>
+          </li>
+          <li class="nav-item me-3">
+            <a href="../HTML/news.html" class="nav-link">News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0 m-0">
+    <div class="carousel slide" data-bs-ride="slide" id="featuresCarousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../Image/1.jpg" alt="" class="img-fluid" />
+          <div class="carousel-caption text-center position-absolute top-50 translate-middle-y">
+            <h2 class="display-4 fw-bold">
+              Music Discovery and Recommendations
+            </h2>
+            <p class="lead">
+              Platforms use algorithms to recommend new music based on user
+              preferences, making discovery easy.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../Image/2.jpg" alt="" class="img-fluid" />
+          <div class="carousel-caption text-center position-absolute top-50 translate-middle-y">
+            <h2 class="display-4 fw-bold">Custom and Automated Playlists</h2>
+            <p class="lead">
+              Users can create their own playlists or use ones tailored to
+              mood, genre, or occasions, including expert-curated selections
+              on some platforms.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../Image/3.jpg" alt="" class="img-fluid" />
+          <div class="carousel-caption text-center position-absolute top-50 translate-middle-y">
+            <h2 class="display-4 fw-bold">High-Quality Sound</h2>
+            <p class="lead">
+              Services provide sound options from standard (128 kbps) to high
+              (320 kbps) and lossless (FLAC) for the optimal audio experience.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../Image/4.jpg" alt="" class="img-fluid" />
+          <div class="carousel-caption text-center position-absolute top-50 translate-middle-y">
+            <h2 class="display-4 fw-bold">Device and Service Integration</h2>
+            <p class="lead">
+              Streaming platforms integrate with devices like smart speakers,
+              watches, car systems, and assistants for flexible, convenient
+              music access.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#featuresCarousel">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#featuresCarousel">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- about -->
+  <section class="mt-5">
+    <div class="container bg-dark text-light rounded p-4">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <h1 class="display-1 fw-bolder fst-italic">MUSIC TO EXTREME</h1>
+          <p class="lead" style="text-align: justify">
+            Xtreme is a cutting-edge music platform tailored for those who
+            seek to explore and redefine their musical tastes. This platform
+            stands out by offering users an unparalleled journey through a
+            vast library of songs that cover a wide range of music styles.
+            It's not just about accessing diverse music; it's about
+            personalization and discovery. Xtreme uses sophisticated
+            algorithms to provide personalized recommendations that adapt to
+            your evolving tastes. Whether you're in the mood for underground
+            beats or timeless classics, Xtreme ensures that your listening
+            experience is always dynamic and aligned with your current
+            preferences. Step into the world of Xtreme, where your musical
+            exploration knows no bounds.
+          </p>
+        </div>
+        <div class="col-12 col-lg-4 d-flex align-items-center">
+          <img src="../Image/About/listenToMusic.jpg" alt="introduce Img" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- banner -->
+  <section id="premium" class="fixed-bg container-fluid m-0 my-5 p-3 d-flex align-items-center justify-content-center"
+    style="background-image: url(../Image/About/premiumBanner.jpg); height: 200px">
+    <h1 class="text-light fst-italic">BECOME A PREMIUM MEMBER TODAY!!!</h1>
+  </section>
+
+  <section>
+    <div class="container w-75">
+      <div class="row g-3 justify-content-evenly">
+
+        <div class="col-lg-5 col-12">
+          <div class="row gy-4 border border-light rounded fixed-bg p-3"
+            style="background-image: url(../Image/About/premiumBackground.jpg)">
+
+            <div class="col-12">
+              <p class="display-5 text-secondary fw-bolder fst-italic text-center bg-light rounded-pill">NORMAL <br>
+                MEMBER</p>
+            </div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Ad-free listening </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/no.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Download for online playback </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/no.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Shuffle play </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/no.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">High audio quality </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/no.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Real-time listening with friends </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/no.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Queue Management </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/no.png" alt="" class="">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-12">
+          <div class="row gy-4 border border-light rounded fixed-bg p-3"
+            style="background-image: url(../Image/About/premiumBackground.jpg)">
+
+            <div class="col-12">
+              <p class="display-5 text-primary fw-bolder fst-italic text-center bg-light rounded-pill">PREMIUM MEMBER
+              </p>
+            </div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Ad-free listening </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/check.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Download for online playback </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/check.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Shuffle play </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/check.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">High audio quality </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/check.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Real-time listening with friends </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/check.png" alt="" class="">
+            </div>
+
+            <div class="col-12 border-bottom border-5"></div>
+
+            <div class="col-8 d-flex align-items-center">
+              <p class="text-light fw-bold fs-5">Queue Management </p>
+            </div>
+            <div class="col-4">
+              <img src="../Image/About/check.png" alt="" class="">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-11 d-grid m-3">
+          <button class="btn btn-warning text-light fw-bold fs-5 p-3 rounded-pill" id="signBtn" data-bs-toggle="modal"
+            data-bs-target="#signForm">
+            CLICK TO BECOME PREMIUM MEMBER TODAY!! <span class="text-danger">ONLY $3.99</span>
+          </button>
+        </div>
+      </div>
+  </section>
+  </div>
+
+ <!-- start footer -->
+ <div class="footer p-3">
+  <div class="row">
+      <div class="col-lg-3 col-sm-6 quick-links">
+          <h3 class="text-white">Company</h3>
+          <div class="nav-bar">
+              <div class="container-fluid">
+                  <ul class="navbar-nav">
+                      <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                      <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+                      <li class="nav-item"><a href="" class="nav-link">For the Record</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 quick-links">
+          <h3 class="text-white">Communities</h3>
+          <div class="nav-bar">
+              <div class="container-fluid">
+                  <ul class="navbar-nav">
+                      <li class="nav-item"><a href="" class="nav-link">For Artists</a></li>
+                      <li class="nav-item"><a href="" class="nav-link">Deverlopers</a></li>
+                      <li class="nav-item"><a href="" class="nav-link">Advertising</a></li>
+                      <li class="nav-item"><a href="" class="nav-link">Investors</a></li>
+                      <li class="nav-item"><a href="" class="nav-link">Vendors</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-6 col-sm-6 quick-links">
+          <h3 class="text-white">Feedback</h3>
+          <h5 class="text-white">Thank you for using our website</h5>
+          <h5 class="text-white">Feedback for us</h5>
+          <form class="d-flex mb-3" action="">
+              <input type="text" name="" id="" class="form-control w-75" placeholder="Your feedback">
+              <button type="button" class="btn btn-primary ms-2">Send</button>
+          </form>
+          <p class="h5 text-white">Follow Us:
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-twitter"></i>
+          </p>
+      </div>
+  </div>
+</div>
+<!-- end footer -->
+
+  <!-- modal: signForm -->
+  <div class="modal fade" id="signForm">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#signInForm">
+                Sign In
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#signUpForm">
+                Sign Up
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="signInForm">
+              <form class="needs-validation" novalidate>
+                <div class="row gy-2">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="email" id="emailSignIn" class="form-control" required />
+                      <label for="emailSignIn">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" id="passwordSignIn" class="form-control" required />
+                      <label for="passwordSignIn">Password</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-success mt-3 w-100" type="submit">
+                  Sign in
+                </button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="signUpForm">
+              <form class="needs-validation" novalidate>
+                <div class="row gy-2">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="email" id="emailSignUp" class="form-control" required />
+                      <label for="emailSignUp">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" id="passwordSignUp" class="form-control" required />
+                      <label for="passwordSignUp">Password</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" id="fullNameSignUp" class="form-control" required />
+                      <label for="fullNameSignUp">Fullname</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary mt-3 w-100" type="submit">
+                  Sign up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

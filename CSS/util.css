@@ -39,6 +39,9 @@ nav {
     background: linear-gradient(90deg, rgba(24, 49, 82, 1) 15%, rgba(25, 51, 83, 1) 67%);
     background-image: url('../Image/2.jpg');
     background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer a{

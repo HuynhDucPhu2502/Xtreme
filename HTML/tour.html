@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/util.css">
+  <link rel="stylesheet" href="../CSS/tour.css">
+  <title>Tour</title>
+</head>
+
+<body>
+  <!-- top bar -->
+  <section class="py-2" id="top">
+    <div class="container d-flex justify-content-between align-items-center text-light">
+      <div>
+        <a href="mailto:huynhducphu2502@gmail.com" class="link-light">Support</a>
+      </div>
+      <div>
+        <button class="btn btn-warning" id="signBtn" data-bs-toggle="modal" data-bs-target="#signForm">
+          Sign in / Sign up
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 fs-5">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="../Image/HeaderFooter/logoIcon.png" alt="logo icon" id="musicIcon" />
+          <span class="text-light fw-bold ms-1">Xtreme</span>
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarItems">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <ul class="navbar-nav ms-lg-5">
+            <li class="nav-item me-3">
+              <a href="../HTML/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../HTML/music.html" class="nav-link">Music</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../HTML/tour.html" class="nav-link active">Tour</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../HTML/news.html" class="nav-link">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+  <section class="container gx-5 gy-3 mt-3">
+    <div class="row">
+
+      <div class="col-lg-4 col-12 text-center">
+        <div class="border background-img-tour fixed-bg">
+          <img src="../Image/Tour/Drake.png" alt="" style="width: 100%" class="border border-3">
+          <p class="display-5 fw-bolder text-light">Drake Tour</p>
+          <p class="text-danger fw-bolder fs-3 fst-italic">Certified Lover Boy Tour</p>
+          <ul class="text-light text-start fw-bolder">
+            <li>New York City
+              <ul>
+                <li>Date: June 15, 2024</li>
+                <li>Time: 7:00 PM</li>
+                <li>Address: Madison Square Garden, New York, NY</li>
+                <li>Ticket Price: $150 - $500</li>
+              </ul>
+            </li>
+            <li>Los Angeles
+              <ul>
+                <li>Date: June 22, 2024</li>
+                <li>Time: 7:00 PM</li>
+                <li>Address: The Forum, Inglewood, CA</li>
+                <li>Ticket Price: $180 - $550</li>
+              </ul>
+            </li>
+            <li>Chicago
+              <ul>
+                <li>Date: June 29, 2024</li>
+                <li>Time: 7:00 PM</li>
+                <li>Address: United Center, Chicago, IL</li>
+                <li>Ticket Price: $160 - $520</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-12 text-center">
+        <div class="border background-img-tour fixed-bg">
+          <img src="../Image/Tour/TheWeeknd.jpg" alt="" style="width: 100%;" class="border border-3">
+          <p class="display-5 fw-bolder text-light">The Weeknd Tour</p>
+          <p class="text-info fw-bolder fs-3 fst-italic">After Hours Til Dawn Tour</p>
+          <ul class="text-light text-start fw-bolder">
+            <li>Las Vegas
+              <ul>
+                <li>Date: August 2, 2024</li>
+                <li>Time: 9:00 PM</li>
+                <li>Address: T-Mobile Arena, Las Vegas, <br>NV</li>
+                <li>Ticket Price: $100 - $450</li>
+              </ul>
+            </li>
+            <li>Atlanta
+              <ul>
+                <li>Date: August 9, 2024</li>
+                <li>Time: 9:00 PM</li>
+                <li>Address: State Farm Arena, Atlanta, GA</li>
+                <li>Ticket Price: $110 - $460</li>
+              </ul>
+            </li>
+            <li>Seattle
+              <ul>
+                <li>Date: August 16, 2024</li>
+                <li>Time: 9:00 PM</li>
+                <li>Address: Climate Pledge Arena, Seattle, WA</li>
+                <li>Ticket Price: $115 - $470</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-12 text-center">
+        <div class="border background-img-tour fixed-bg">
+          <img src="../Image/Tour/TaylorSwift.png" alt="" style="width: 100%;" class="border border-3">
+          <p class="display-5 fw-bolder text-light">Taylor Swift Tour</p>
+          <p class="text-warning fw-bolder fs-3 fst-italic">Lover Fest Tour</p>
+          <ul class="text-light text-start fw-bolder">
+            <li>New York City
+              <ul>
+                <li>Date: June 15, 2024</li>
+                <li>Time: 7:00 PM</li>
+                <li>Address: Madison Square Garden, New York, NY</li>
+                <li>Ticket Price: $150 - $500</li>
+              </ul>
+            </li>
+            <li>Los Angeles
+              <ul>
+                <li>Date: June 22, 2024</li>
+                <li>Time: 7:00 PM</li>
+                <li>Address: The Forum, Inglewood, CA</li>
+                <li>Ticket Price: $180 - $550</li>
+              </ul>
+            </li>
+            <li>Chicago
+              <ul>
+                <li>Date: June 29, 2024</li>
+                <li>Time: 7:00 PM</li>
+                <li>Address: United Center, Chicago, IL</li>
+                <li>Ticket Price: $160 - $520</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-12 mt-5 text-center border py-3 border-3 border-secondary">
+      <p class="text-light lead fst-italic fs-4"> <span class="hex-colors fw-bold">HOT!!!</span> Purchase your concert tickets now and unlock exclusive rewards! Not
+        only will you experience an unforgettablelive performance, but each ticket also comes with a piece of exclusive
+        merchandise. Better yet, you'll have the chance to win an autographed item signed by the artist themselves!
+        Don’t miss out on this incredible opportunity to enhance your concert experience. Buy your tickets today and
+        take home more than just memories!</p>
+
+      <a href="#buyTicketTable" class="btn btn-light text-decoration-none hex-colors p-4 fw-bold">BUY TICKET RIGHT NOW!</a>
+    </div>
+  </section>
+
+  <section class="fixed-bg container-fluid m-0 my-5 p-3 d-flex align-items-center justify-content-center"
+    style="background-image: url(../Image/About/premiumBanner.jpg); height: 200px">
+    <h1 class="text-light fst-italic">BUY A TICKET TO A CONCEPT</h1>
+  </section>
+
+  <section class="container my-5" >
+    
+    <div class="row justify-content-center py-3">
+      <div class="col-12">
+        <div class="table-responsive m-auto w-100 bg-light p-3">
+          <p class="h1 text-center">Đặt tour</p>
+          <table class="table align-middle table-light" id="buyTicketTable">
+            <tr>
+              <td><label for="nameInput" class="form-label">Name:
+                <span id="errName" style="color: red;">(*)</span>
+              </label></td>
+              <td><input type="text" class="form-control" id="nameInput"></td>
+              <td><label for="dobInput" class="form-label">Date of birth:
+                <span id="arrAge" style="color: red;">(*)</span>
+              </label></td>
+              <td><input type="date" class="form-control" id="dobInput"></td>
+            </tr>
+
+            <tr>
+              <td><label for="addressInput" class="form-label">Address:
+                <span id="errAddress" style="color: red;">(*)</span>
+              </label></td>
+              <td><input type="text" class="form-control" id="addressInput"></td>
+              <td><label for="telInput" class="form-label">PhoneNumber:
+                <span id="errPhone" style="color: red;">(*)</span>
+              </label></td>
+              <td><input type="tel" class="form-control" id="telInput"></td>
+            </tr>
+
+            <tr>
+              <td><label for="idInput" class="form-label">ID:
+                <span id="errID" style="color: red;">(*)</span>
+              </label></td>
+              <td><input type="text" class="form-control" id="idInput"></td>
+              <td><label for="" class="form-label">Gender:
+                <span id="errGender" style="color: red;">(*)</span>
+              </label>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="genderSelector" id="male" value="Male" />
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="genderSelector" id="female" value="Female" />
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="tourSelector" class="form-label">Tour:</label></td>
+              <td>
+                <select name="" id="tourSelector" class="form-select">
+                  <option value="Certified Lover Boy Tour">Certified Lover Boy Tour</option>
+                  <option value="After Hours Til Dawn Tour">After Hours Til Dawn Tour</option>
+                  <option value="Lover Fest Tour">Lover Fest Tour</option>
+                </select>
+              </td>
+              <td><label for="tourCity" class="form-label">City Tour:</label></td>
+              <td>
+                <select name="" id="citySelector" class="form-select">
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="date_start" class="form-label">Date:</label></td>
+              <td><input type="date" class="form-control" id="date_start" disabled></td>
+              <td><label for="time_start" class="form-label">Time:</label></td>
+              <td><input type="text" class="form-control" id="time_start" disabled></td>
+            </tr>
+            <tr>
+              <td><label for="address_start" class="form-label">Address:</label></td>
+              <td><input type="text" class="form-control" id="address_start" disabled></td>
+              <td><label for="price" class="form-label">Ticket Price:</label></td>
+              <td><input type="text" class="form-control" id="price" disabled></td>
+            </tr>
+            
+            <tr class="text-center">
+              <td colspan="4">
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="dattour"
+                  >
+                    Đặt tour
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                  >
+                    Hủy
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="table-responsive m-auto w-100 bg-light p-3">
+        
+        <div
+          class="table-responsive"
+        >
+          <table
+            class="table"
+            
+          >
+            <thead>
+              <p class="h1 text-center">Lịch sử đặt tour</p>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">DoB</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col">ID</th>
+                <th scope="col">Genger</th>
+                <th scope="col">Tour</th>
+                <th scope="col">City Tour</th>
+                <th scope="col">Date Start</th>
+                <th scope="col">Time Start</th>
+                <th scope="col">Organization address</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody id="tour_table">
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <!-- start footer -->
+  <div class="footer p-3">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 quick-links">
+        <h3 class="text-white">Company</h3>
+        <div class="nav-bar">
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+              <li class="nav-item"><a href="" class="nav-link">For the Record</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 quick-links">
+        <h3 class="text-white">Communities</h3>
+        <div class="nav-bar">
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="" class="nav-link">For Artists</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Deverlopers</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Advertising</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Investors</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Vendors</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-6 quick-links">
+        <h3 class="text-white">Feedback</h3>
+        <h5 class="text-white">Thank you for using our website</h5>
+        <h5 class="text-white">Feedback for us</h5>
+        <form class="d-flex mb-3" action="">
+          <input type="text" name="" id="" class="form-control w-75" placeholder="Your feedback">
+          <button type="button" class="btn btn-primary ms-2">Send</button>
+        </form>
+        <p class="h5 text-white">Follow Us:
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- end footer -->
+
+  <!-- modal: signForm -->
+  <div class="modal fade" id="signForm">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#signInForm">
+                Sign In
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#signUpForm">
+                Sign Up
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="signInForm">
+              <form class="needs-validation" novalidate>
+                <div class="row gy-2">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="email" id="emailSignIn" class="form-control" required />
+                      <label for="emailSignIn">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" id="passwordSignIn" class="form-control" required />
+                      <label for="passwordSignIn">Password</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-success mt-3 w-100" type="submit">
+                  Sign in
+                </button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="signUpForm">
+              <form class="needs-validation" novalidate>
+                <div class="row gy-2">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="email" id="emailSignUp" class="form-control" required />
+                      <label for="emailSignUp">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" id="passwordSignUp" class="form-control" required />
+                      <label for="passwordSignUp">Password</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" id="fullNameSignUp" class="form-control" required />
+                      <label for="fullNameSignUp">Fullname</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary mt-3 w-100" type="submit">
+                  Sign up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../JS/tour.js"></script>
+
+  <script>
+    
+  </script>
+</body>
+
+</html>

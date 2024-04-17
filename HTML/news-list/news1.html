@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <link rel="stylesheet" href="../../CSS/util.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- top bar -->
+    <section class="py-2" id="top">
+      <div
+        class="container d-flex justify-content-between align-items-center text-light"
+      >
+        <div>
+          <a href="mailto:huynhducphu2502@gmail.com" class="link-light"
+            >Support</a
+          >
+        </div>
+        <div class="d-flex w-50 justify-content-center">
+          <input
+            type="search"
+            class="form-control w-50 bg-transparent"
+            id="searchInput"
+          />
+          <button class="btn btn-light bg-transparent" id="searchBtn">
+            <img
+              src="../../Image/HeaderFooter/searchIcon.svg"
+              alt="search icon"
+              id="searchIcon"
+            />
+          </button>
+        </div>
+        <div>
+          <button
+            class="btn btn-warning"
+            id="signBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#signForm"
+          >
+            Sign in / Sign up
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 fs-5">
+      <div class="container-fluid">
+        <a href="../index.html" class="navbar-brand d-flex align-items-center">
+          <img
+            src="../../Image/HeaderFooter/logoIcon.png"
+            alt="logo icon"
+            id="musicIcon"
+          />
+          <span class="text-light fw-bold ms-1">Xtreme</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <ul class="navbar-nav ms-lg-5">
+            <li class="nav-item me-3">
+              <a href="../../HTML/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../../HTML/music.html" class="nav-link">Music</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../../HTML/tour.html" class="nav-link">Tour</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../news.html" class="nav-link active">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- modal: signForm -->
+    <div class="modal fade" id="signForm">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#signInForm"
+                >
+                  Sign In
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#signUpForm"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="signInForm">
+                <form class="needs-validation" novalidate>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          id="emailSignIn"
+                          class="form-control"
+                          required
+                        />
+                        <label for="emailSignIn">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="passwordSignIn"
+                          class="form-control"
+                          required
+                        />
+                        <label for="passwordSignIn">Password</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-success mt-3 w-100" type="submit">
+                    Sign in
+                  </button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="signUpForm">
+                <form class="needs-validation" novalidate>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          id="emailSignUp"
+                          class="form-control"
+                          required
+                        />
+                        <label for="emailSignUp">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="passwordSignUp"
+                          class="form-control"
+                          required
+                        />
+                        <label for="passwordSignUp">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="fullNameSignUp"
+                          class="form-control"
+                          required
+                        />
+                        <label for="fullNameSignUp">Fullname</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-3 w-100" type="submit">
+                    Sign up
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWS DETAIL -->
+
+    <div class="row p-3">
+        <div class="col-8 p-4 text-light">
+            <p id="link_list" class="text-light">
+                <a class="link-light link-underline-opacity-0" href="../index.html">Home</a> > <a href="../news.html" class="link-light link-underline-opacity-0">News</a> > Watch Bruce Springsteen play a raucous "Viva Las Vegas" in Sin City  
+            </p>
+            <div id="title" class="my-4">
+                <h1 class="text-light text-uppercase" style="font-weight: bold;">Watch Bruce Springsteen play a raucous "Viva Las Vegas" in Sin City</h1>
+                <p id="content" style="font-size: 1.3rem;">It was the Boss' second full show back after taking a health break late last year</p>
+                <p class="text-start text-light">7/4/2024 | By <a class="link-light link-underline-opacity-0" href="#">Le Tran Gia Huy</a></p>
+            </div>
+            <img src="../../Image/News/news-crsl/news1.jpg" alt="" id="thumbnail">
+            <p id="news-content-first" class="news-content text-justify">
+                Bruce Springsteen returned to Las Vegas last night (March 22), greeting the city with a rendition of Elvis Presley’s ‘Viva Las Vegas’ – check out the footage below.
+            </p>
+            <p class="news-content text-justify">
+                The track was included as one of a number of surprise setlist inclusions at the show, which also saw songs like 1992’s ‘Roll of the Dice’ and 1978’s ‘Racing in the Street’ get their first outings in several years.
+            </p>
+            <p class="news-content text-justify">
+                It was the second show of the 2024 leg of Springsteen’s current world tour, which has restarted after the Boss had to postpone a hefty chunk of shows in 2023 due to health concerns.
+            </p>
+            <iframe width="550" height="300" src="https://www.youtube.com/embed/bxDPvnosD3A" title="Bruce Springsteen and The E Street Band - “Viva Las Vegas” - Las Vegas, Nevada - March 22, 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <iframe width="550" height="300" src="https://www.youtube.com/embed/Glyo_cFCp7o" title="Bruce Springsteen and The E Street Band - “Racing in the Street” - Las Vegas, NV - March 22, 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <p class="news-content text-justify">
+                The worries arose towards the end of last year, when the singer-songwriter needed to be treated for peptic ulcer disease, and was forced to delay all of his shows after playing in New Jersey on September 3.
+            </p>
+            <p class="news-content text-justify">
+                On March 19, they returned to the stage in Phoenix, Arizona, playing a set incorporating tracks from across his extensive discography, ranging from his first album, ‘Greetings From Asbury Park, N.J.’, through 2022’s ‘Only the Strong Survive’.
+            </p>
+            <p class="news-content text-justify">
+              In other Bruce Springsteen news, the Boss recently took part in Mark Knopfler’s star-studded charity re-recording of ‘Going Home’, which starred the likes of Queen‘s Brian May, Bruce Springsteen, Black Sabbath’s Tony Iommi, Eric Clapton, Rolling Stones guitarist Ronnie Wood and many more.
+            </p>
+            <p class="news-content text-justify">
+              He also made a cameo appearance in a recent episode of Curb Your Enthusiasm, and announced details of a career-spanning compilation, titled ‘Best Of Bruce Springsteen’ – due for release on Friday, April 19 via Sony Music.
+            </p>
+            <p class="news-content text-justify">
+              Later this summer, The Boss is set to return to this side of the pond for his 2024 UK and Ireland tour – find any remaining tickets here.
+            </p>
+        </div>
+
+
+
+        <div id="side-news" class="col-4 text-start">
+          <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">TRENDING</h2>
+
+            <a href="../../HTML/news-list/news1.html" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-3" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../../Image/News/news-crsl/news1.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6>
+                    Watch Bruce Springsteen play a raucous "Viva Las Vegas" in Sin City
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    1932 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-2" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../../Image/News/news-crsl/news3.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6>
+                    Death toll from Russian music venue terror attack rises to 133
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    1851 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="../../HTML/news-list/news2.html" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-3" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../../Image/News/news-crsl/news2.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6 class="text-justify">
+                    Anitta reveals "Funk Generation" release date, shares new single "Double Team"
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    1849 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-3" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../../Image/News/news-crsl/news5.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6 class="text-justify">
+                    Rare Mac Miller song sampling 'Eternal Sunshine' is now available on streaming
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    850 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          <h2 class="my-2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">TOP MUSIC TODAY</h2>
+
+          <a href="../../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row mx-auto" style="border-radius: 10px; background-color: rgb(222, 222, 155);">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../../Image/Music/ca-si-1.jpg" alt="ca-si-1">
+              </div>
+              <div class="col-7">
+                <h3 style="color: rgb(113, 113, 249);">
+                  Nấu ăn cho em
+                </h3>
+                <p style="font-weight: bold; color: rgb(113, 113, 249);">
+                  Đen Vâu
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: rgb(234, 234, 219);">
+                  1
+                </h1>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="../../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto" style="border-radius: 10px; background-color: grey">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../../Image/Music/ca-si-2.jpg" alt="ca-si-2">
+              </div>
+              <div class="col-7">
+                <h4 style="color: rgb(255, 255, 255);">
+                  Anh nhà ở đâu đấy
+                </h4>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  Amee
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: rgb(166, 165, 165);">
+                  2
+                </h1>
+              </div>
+            </div>
+          </a>
+
+          <a href="../../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto" style="border-radius: 10px; background-color: #b1865c">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../../Image/Music/ca-si-3.jpg" alt="ca-si-3">
+              </div>
+              <div class="col-7">
+                <h5 style="color: rgb(255, 255, 255);">
+                  Chúng ta của hiện tại
+                </h5>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  Sơn Tùng
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: #b59b81">
+                  3
+                </h1>
+              </div>
+            </div>
+          </a>
+
+          <a href="../../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto bg-dark" style="border-radius: 10px">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../../Image/Music/ca-si-4.jpg" alt="ca-si-4">
+              </div>
+              <div class="col-7">
+                <h5 style="color: rgb(255, 255, 255);">
+                  Anh luôn như vậy
+                </h5>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  B-Ray
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: #383739">
+                  4
+                </h1>
+              </div>
+            </div>
+          </a>
+
+          <a href="../../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto bg-dark" style="border-radius: 10px">
+              <div class="col-3" >
+                <img style="border-radius: 5px; height: 5rem;" class="img-fluid my-1 mx-auto" src="../../Image/Music/ca-si-5.jpg" alt="ca-si-5">
+              </div>
+              <div class="col-7">
+                <h5 style="color: rgb(255, 255, 255);">
+                  Em gái mưa
+                </h5>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  Hương Tràm
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: #383739">
+                  5
+                </h1>
+              </div>
+            </div>
+          </a>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="footer p-3">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 quick-links">
+          <h3 class="text-white">Company</h3>
+          <div class="nav-bar">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="" class="nav-link">For the Record</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 quick-links">
+          <h3 class="text-white">Communities</h3>
+          <div class="nav-bar">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link">For Artists</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Deverlopers</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Advertising</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Investors</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Vendors</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 quick-links">
+          <h3 class="text-white">Feedback</h3>
+          <h5 class="text-white">Thank you for using our website</h5>
+          <h5 class="text-white">Feedback for us</h5>
+          <form class="d-flex mb-3" action="">
+            <input type="text" name="" id="" class="form-control w-75" placeholder="Your feedback">
+            <button type="button" class="btn btn-primary ms-2">Send</button>
+          </form>
+          <p class="h5 text-white">Follow Us:
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/form_validation.js"></script>
+  </body>
+</html>

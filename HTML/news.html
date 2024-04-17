@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/util.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- top bar -->
+    <section class="py-2" id="top">
+      <div
+        class="container d-flex justify-content-between align-items-center text-light"
+      >
+        <div>
+          <a href="mailto:huynhducphu2502@gmail.com" class="link-light"
+            >Support</a
+          >
+        </div>
+        <div class="d-flex w-50 justify-content-center">
+          <input
+            type="search"
+            class="form-control w-50 bg-transparent"
+            id="searchInput"
+          />
+          <button class="btn btn-light bg-transparent" id="searchBtn">
+            <img
+              src="../../Image/HeaderFooter/searchIcon.svg"
+              alt="search icon"
+              id="searchIcon"
+            />
+          </button>
+        </div>
+        <div>
+          <button
+            class="btn btn-warning"
+            id="signBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#signForm"
+          >
+            Sign in / Sign up
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 fs-5">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img
+            src="../../Image/HeaderFooter/logoIcon.png"
+            alt="logo icon"
+            id="musicIcon"
+          />
+          <span class="text-light fw-bold ms-1">Xtreme</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <ul class="navbar-nav ms-lg-5">
+            <li class="nav-item me-3">
+              <a href="../HTML/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../HTML/music.html" class="nav-link">Music</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../HTML/tour.html" class="nav-link">Tour</a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="../HTML/news.html" class="nav-link active">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- modal: signForm -->
+    <div class="modal fade" id="signForm">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#signInForm"
+                >
+                  Sign In
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#signUpForm"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="signInForm">
+                <form class="needs-validation" novalidate>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          id="emailSignIn"
+                          class="form-control"
+                          required
+                        />
+                        <label for="emailSignIn">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="passwordSignIn"
+                          class="form-control"
+                          required
+                        />
+                        <label for="passwordSignIn">Password</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-success mt-3 w-100" type="submit">
+                    Sign in
+                  </button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="signUpForm">
+                <form class="needs-validation" novalidate>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          id="emailSignUp"
+                          class="form-control"
+                          required
+                        />
+                        <label for="emailSignUp">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="passwordSignUp"
+                          class="form-control"
+                          required
+                        />
+                        <label for="passwordSignUp">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="password"
+                          id="fullNameSignUp"
+                          class="form-control"
+                          required
+                        />
+                        <label for="fullNameSignUp">Fullname</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-3 w-100" type="submit">
+                    Sign up
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-white p-3 my-3">
+      <div class="row">
+        <div id="main-news" class="col-8 text-start">
+          <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">HOT NEWS TODAY</h1>
+
+          <div id="news-crsl" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#news-crsl" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#news-crsl" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#news-crsl" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#news-crsl" data-bs-slide-to="3"></button>
+              <button type="button" data-bs-target="#news-crsl" data-bs-slide-to="4"></button>
+            </div>
+
+            <div class="carousel-inner" style="border-radius: 20px;">
+              <div class="carousel-item active">
+                <a href="../HTML/news-list/news1.html">
+                  <img src="../Image/News/news-crsl/news1.jpg" alt="news1" class="d-block w-100">
+                <div class="carousel-caption">
+                  <a class="link-light link-underline-opacity-0" href="../HTML/news-list/news1.html"><h2 class="text-start fw-bold text-uppercase mb-0" style="font-family: Helvetica; text-shadow: black 5px 5px 5px;">Watch Bruce Springsteen play a raucous "Viva Las Vegas" in Sin City</h2></a>
+                </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../Image/News/news-crsl/news2.jpg"" alt="news2" class="d-block w-100">
+                <div class="carousel-caption">
+                  <a class="link-light link-underline-opacity-0" href="#"><h2 class="text-start fw-bold text-uppercase mb-0" style="font-family: Helvetica; text-shadow: black 5px 5px 5px;">Anitta reveals "Funk Generation" release date, shares new single "Double Team"</h2></a>
+                </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../Image/News/news-crsl/news3.jpg"" alt="news3" class="d-block w-100">
+                <div class="carousel-caption">
+                  <a class="link-light link-underline-opacity-0" href="#"><h2 class="text-start fw-bold text-uppercase mb-0" style="font-family: Helvetica; text-shadow: black 5px 5px 5px;">Death toll from Russian music venue terror attack rises to 133</h2></a>
+                </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../Image/News/news-crsl/news4.jpg"" alt="news4" class="d-block w-100">
+                <div class="carousel-caption">
+                  <a class="link-light link-underline-opacity-0" href="#"><h2 class="text-start fw-bold text-uppercase mb-0" style="font-family: Helvetica; text-shadow: black 5px 5px 5px;">Old man sings Drowning Pool's 'Bodies' at karaoke, goes viral on TikTok: “This is who I aspire to be in life”</h2></a>
+                </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../Image/News/news-crsl/news5.jpg"" alt="news5" class="d-block w-100">
+                <div class="carousel-caption">
+                  <a class="link-light link-underline-opacity-0" href="#"><h2 class="text-start fw-bold text-uppercase mb-0" style="font-family: Helvetica; text-shadow: black 5px 5px 5px;">Rare Mac Miller song sampling 'Eternal Sunshine' is now available on streaming</h2></a>
+                </div>
+                </a>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#news-crsl" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button type="button" class="carousel-control-next" data-bs-target="#news-crsl" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <!--NEWS LIST-->
+          <div class="news-list row mt-4 bg-dark" style="height: 10.8rem; border-radius: 10px;">
+            <div id="news-pic" class="col-3">
+              <div style="margin-top: 1.5rem;">
+                <a href="../HTML/news-list/news1.html">
+                  <img class="img-fluid mx-auto d-block" style="border-radius: 10px;" src="../Image/News/news-crsl/news1.jpg" alt="news1">
+                </a>
+              </div>
+            </div>
+            <div id="news-title" class="col-9">
+              <a href="../HTML/news-list/news1.html" class="link-light link-underline-opacity-0">
+                <p style="font-size: 1.6rem; font-weight: bold; margin-top: 1rem;">
+                  Watch Bruce Springsteen play a raucous "Viva Las Vegas" in Sin City
+                </p>
+                <p class="text-end">8/4/2024 | By <a class="link-light link-underline-opacity-0" href="#">Le Tran Gia Huy</a></p>
+              </a>
+            </div>
+          </div>
+
+          <div class="news-list row mt-4 bg-dark" style="height: 10.8rem; border-radius: 10px;">
+            <div id="news-pic" class="col-3">
+              <div style="margin-top: 1.5rem;">
+                <a href="">
+                  <img class="img-fluid mx-auto d-block" style="border-radius: 10px;" src="../Image/News/news-crsl/news2.jpg" alt="news2">
+                </a>
+              </div>
+            </div>
+            <div id="news-title" class="col-9">
+              <a href="" class="link-light link-underline-opacity-0">
+                <p style="font-size: 1.6rem; font-weight: bold; margin-top: 1rem;">
+                  Anitta reveals "Funk Generation" release date, shares new single "Double Team"
+                </p>
+                <p class="text-end">8/4/2024 | By <a class="link-light link-underline-opacity-0" href="#">Huynh Duc Phu</a></p>
+              </a>
+            </div>
+          </div>
+
+          <div class="news-list row mt-4 bg-dark" style="height: 10.8rem; border-radius: 10px;">
+            <div id="news-pic" class="col-3">
+              <div style="margin-top: 1.5rem;">
+                <a href="">
+                  <img class="img-fluid mx-auto d-block" style="border-radius: 10px;" src="../Image/News/news-crsl/news3.jpg" alt="news3">
+                </a>
+              </div>
+            </div>
+            <div id="news-title" class="col-9">
+              <a href="" class="link-light link-underline-opacity-0">
+                <p style="font-size: 1.6rem; font-weight: bold; margin-top: 1rem;">
+                  Death toll from Russian music venue terror attack rises to 133
+                </p>
+                <p class="text-end">7/4/2024 | By <a class="link-light link-underline-opacity-0" href="#">Le Tran Gia Huy</a></p>
+              </a>
+            </div>
+          </div>
+
+          <div class="news-list row mt-4 bg-dark" style="height: 10.8rem; border-radius: 10px;">
+            <div id="news-pic" class="col-3">
+              <div style="margin-top: 1.5rem;">
+                <a href="">
+                  <img class="img-fluid mx-auto d-block" style="border-radius: 10px;" src="../Image/News/news-crsl/news4.jpg" alt="news4">
+                </a>
+              </div>
+            </div>
+            <div id="news-title" class="col-9">
+              <a href="" class="link-light link-underline-opacity-0">
+                <p style="font-size: 1.6rem; font-weight: bold; margin-top: 1rem;">
+                  Old man sings Drowning Pool's 'Bodies' at karaoke, goes viral on TikTok: “This is who I aspire to be in life”
+                </p>
+                <p class="text-end">7/4/2024 | By <a class="link-light link-underline-opacity-0" href="#">Dang Nguyen Tien Phat</a></p>
+              </a>
+            </div>
+          </div>
+
+          <div class="news-list row mt-4 bg-dark" style="height: 10.8rem; border-radius: 10px;">
+            <div class="col-3">
+              <div style="margin-top: 1.5rem;">
+                <a href="">
+                  <img class="img-fluid mx-auto d-block" style="border-radius: 10px;" src="../Image/News/news-crsl/news5.jpg" alt="news5">
+                </a>
+              </div>
+            </div>
+            <div class="col-9">
+              <a href="" class="link-light link-underline-opacity-0">
+                <p style="font-size: 1.6rem; font-weight: bold; margin-top: 1rem;">
+                  Rare Mac Miller song sampling 'Eternal Sunshine' is now available on streaming
+                </p>
+                <p class="text-end">6/4/2024 | By <a class="link-light link-underline-opacity-0" href="#">Dang Nguyen Tien Phat</a></p>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!--SIDE NEWS-->
+
+        <div id="side-news" class="col-4 text-start">
+          <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">TRENDING</h2>
+
+            <a href="../HTML/news-list/news1.html" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-3" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../Image/News/news-crsl/news1.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6>
+                    Watch Bruce Springsteen play a raucous "Viva Las Vegas" in Sin City
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    1932 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-2" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../Image/News/news-crsl/news3.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6>
+                    Death toll from Russian music venue terror attack rises to 133
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    1851 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="../HTML/news-list/news2.html" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-3" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../Image/News/news-crsl/news2.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6 class="text-justify">
+                    Anitta reveals "Funk Generation" release date, shares new single "Double Team"
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    1849 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="link-light link-underline-opacity-0">
+              <div class="list-of-side-news row bg-dark my-3" style="border-radius: 10px;">
+                <div class="col-4 my-3">
+                  <img class="img-fluid" style="border-radius: 10px;" src="../Image/News/news-crsl/news5.jpg" alt="news1">
+                </div>
+                <div class="col-7 my-1">
+                  <h6 class="text-justify">
+                    Rare Mac Miller song sampling 'Eternal Sunshine' is now available on streaming
+                  </h6>
+                  <p class="text-end" style="font-size: small;">
+                    850 views
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          <h2 class="my-2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">TOP MUSIC TODAY</h2>
+
+          <a href="../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row mx-auto" style="border-radius: 10px; background-color: rgb(222, 222, 155);">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../Image/Music/ca-si-1.jpg" alt="ca-si-1">
+              </div>
+              <div class="col-7">
+                <h3 style="color: rgb(113, 113, 249);">
+                  Nấu ăn cho em
+                </h3>
+                <p style="font-weight: bold; color: rgb(113, 113, 249);">
+                  Đen Vâu
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: rgb(234, 234, 219);">
+                  1
+                </h1>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto" style="border-radius: 10px; background-color: grey">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../Image/Music/ca-si-2.jpg" alt="ca-si-2">
+              </div>
+              <div class="col-7">
+                <h4 style="color: rgb(255, 255, 255);">
+                  Anh nhà ở đâu đấy
+                </h4>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  Amee
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: rgb(166, 165, 165);">
+                  2
+                </h1>
+              </div>
+            </div>
+          </a>
+
+          <a href="../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto" style="border-radius: 10px; background-color: #b1865c">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../Image/Music/ca-si-3.jpg" alt="ca-si-3">
+              </div>
+              <div class="col-7">
+                <h5 style="color: rgb(255, 255, 255);">
+                  Chúng ta của hiện tại
+                </h5>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  Sơn Tùng
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: #b59b81">
+                  3
+                </h1>
+              </div>
+            </div>
+          </a>
+
+          <a href="../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto bg-dark" style="border-radius: 10px">
+              <div class="col-3" >
+                <img style="border-radius: 5px;" class="img-fluid my-1 mx-auto" src="../Image/Music/ca-si-4.jpg" alt="ca-si-4">
+              </div>
+              <div class="col-7">
+                <h5 style="color: rgb(255, 255, 255);">
+                  Anh luôn như vậy
+                </h5>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  B-Ray
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: #383739">
+                  4
+                </h1>
+              </div>
+            </div>
+          </a>
+
+          <a href="../HTML/music.html" class="link-light link-underline-opacity-0">
+            <div class="row my-2 mx-auto bg-dark" style="border-radius: 10px">
+              <div class="col-3" >
+                <img style="border-radius: 5px; height: 5rem;" class="img-fluid my-1 mx-auto" src="../Image/Music/ca-si-5.jpg" alt="ca-si-5">
+              </div>
+              <div class="col-7">
+                <h5 style="color: rgb(255, 255, 255);">
+                  Em gái mưa
+                </h5>
+                <p style="font-weight: bold; color: rgb(255, 255, 255);">
+                  Hương Tràm
+                </p>
+              </div>
+              <div class="col-2">
+                <h1 style="font-size: 4em; color: #383739">
+                  5
+                </h1>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="footer p-3">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 quick-links">
+          <h3 class="text-white">Company</h3>
+          <div class="nav-bar">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="" class="nav-link">For the Record</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 quick-links">
+          <h3 class="text-white">Communities</h3>
+          <div class="nav-bar">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link">For Artists</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Deverlopers</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Advertising</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Investors</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Vendors</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 quick-links">
+          <h3 class="text-white">Feedback</h3>
+          <h5 class="text-white">Thank you for using our website</h5>
+          <h5 class="text-white">Feedback for us</h5>
+          <form class="d-flex mb-3" action="">
+            <input type="text" name="" id="" class="form-control w-75" placeholder="Your feedback">
+            <button type="button" class="btn btn-primary ms-2">Send</button>
+          </form>
+          <p class="h5 text-white">Follow Us:
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/form_validation.js"></script>
+  </body>
+</html>

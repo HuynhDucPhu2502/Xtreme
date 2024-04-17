@@ -1,0 +1,28 @@
+.background-img-tour {
+    background-image: url(../Image/Tour/background.jpg);
+}
+
+.hex-colors {
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: indigo;
+    }
+    20% {
+        color: blue;
+    }
+    40% {
+        color: green;
+    }
+    60% {
+        color: yellow;
+    }
+    80% {
+        color: orange;
+    }
+    100% {
+        color: red;
+    }
+}

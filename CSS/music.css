@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list-music{
+    background-image: url('../Image/1.jpg');
+}
+.border-img {
+    border-radius: 5px;
+}
+
+.background-linear-song{
+    background: linear-gradient(90deg, rgba(0, 0, 4, 1) 0%, rgba(24, 49, 82, 1) 15%, rgba(25, 51, 83, 1) 67%, rgba(0, 212, 255, 0) 100%);
+}
+
+.background-linear-song:hover{
+    border: solid thin gray;
+}
+
+.category{
+    background: linear-gradient(90deg, rgba(0, 0, 4, 1) 0%, rgba(24, 49, 82, 1) 15%, rgba(25, 51, 83, 1) 67%, rgba(0, 212, 255, 0) 100%);
+    color: white;
+}
+
+.card-img{
+    width: 200px; height: 200px; object-fit: cover;
+}
+
+
+.tab-content, .tab-pane {
+    overflow: auto;
+    max-height: 100%;
+}
+.nav-tabs .nav-item .nav-link{
+    color:white;
+}
+
+.nav-tabs .nav-link.active{
+    color: black;
+}
+
+#playButton:hover{
+    background-color: var(--bs-btn-bg-dark);
+}
+
+#pauseButton:hover, #next-btn:hover, #prev-btn:hover{
+    background-color: var(--bs-btn-bg-dark);
+}
+
+.spinning-img {
+    transition: transform 20s linear;
+}
+  
+.spin {
+    animation: spin 20s linear infinite;
+}
+  
+@keyframes spin {
+    from {
+    transform: rotate(0deg);
+}to {
+      transform: rotate(360deg);
+    }
+}
+
+.form-range {
+    height: 5px !important;
+    width: 7rem;
+}
+
+
+

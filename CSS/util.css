@@ -1,0 +1,62 @@
+body {
+    background-color: var(--bs-gray-800);
+}
+
+#top {
+    background-color: var(--bs-gray-700);
+}
+
+nav {
+    background-color: var(--bs-gray-900);
+}
+
+#signBtn {
+    background-color: #E6D056;
+}
+
+#searchIcon, #musicIcon {
+    width: 24px;
+}
+
+#searchInput {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+}
+
+#searchBtn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    border-left: none;
+}
+
+.footer {
+    min-width: 200px;
+    background: linear-gradient(90deg, rgba(24, 49, 82, 1) 15%, rgba(25, 51, 83, 1) 67%);
+    background-image: url('../Image/2.jpg');
+    background-size: 100%;
+}
+
+.footer a{
+    color: white;
+    
+}
+
+.footer li:hover {
+    color: red;
+}
+
+.footer .quick-links{
+    padding-left: 50px;
+}
+
+.fixed-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

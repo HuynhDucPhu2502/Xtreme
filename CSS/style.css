@@ -40,3 +40,12 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+.news-content{
+    font-size: larger;
+}
+
+#news-content-first{
+    margin-top: 1.2rem;
+}
+

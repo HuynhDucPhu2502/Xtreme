@@ -1,0 +1,31 @@
+Xtream Update Patch Note 21/4/2024
+
+-Tính năng:
+	+ Thêm tính năng lập lại bài và lập lại playlist (repeat-on và repeat-one)
+		+ Với repeat-on lập lại play list khi bài cuối cùng kết thúc
+		+ Với repeat-one lập bài đang phát hiện tại khi bài kết thúc
+	+ Thêm tính năng xem lời nhạc, và lời nhạc chạy theo bài hát
+	+ Thêm tính năng khi chọn bài trên play list, nhạc sẽ tự động play, không cần nhấn nút Play
+	+ Thêm tính năng khi tua bài nhạc sẽ tự đọng play, không cần nhấn nút Play
+-Hàm (function)
+	+ Thêm hàm importLyrics() để lấy lời bài hát từ file vào bằng $.AJAX
+	+ Thêm 1 hàm timeupdate cho audio để dò lời bài hát
+	+ Thêm hàm clearLyrics() để xóa tất cả các lời bài hát
+	+ Thêm 3 hàm xử lí sự kiện cho button có id lyrics-btn, shuffle-btn và repeat
+	+ Thêm mảng record ghi lại mốc thời gian các lời bài hát
+	+ Chỉnh sửa một số hàm đã có để phù hợp với các tính năng đã thêm vào
+-HTML:
+	+ Thay đổi lại giao diện máy phát nhạc (thêm các nút chức năng)
+	+ Thay đổi cách tổ chức của các tab Featured, Trending, v.v. cho mục đích nâng cấp sau này
+	+ Thêm div hiển thị lời nhạc
+	+ Fix lỗi div Category tràn khỏi trang tạo ra scroll trục x
+	+ Thêm nút lyrics, repeat, shuffle
+-Tổ chức file:
+	+ Thêm thư mục Lyrics trong thư mục Song để chứa lời bài hát
+	+ Thêm các ảnh cho các button: lyrics, lyrics-active , repeat, repeat-active, repeat-one, shuffle, shuffle-one
+
+-MISC (vặt vãnh)
+	+ Button shuffle chỉ mới có sự kiện bấm nút, chưa có sự kiện để xử lí tính năng shuffle (Nút shuffle chưa sử dụng được)
+	+ $.AJAX chỉ chạy được trên Live Server, nên muốn chạy trên máy phải chạy thông qua Go Live, nếu chạy web offline thì không thể load lời nhạc lên được
+	+ Hiện tại chương trình mới chỉ xử lí được lời của duy nhất bài nhạc đầu tiên, sau này sẽ nâng cấp lên sau
+	+ Thay đổi một vài class và id tinh linh khác

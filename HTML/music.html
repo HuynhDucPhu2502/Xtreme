@@ -74,42 +74,54 @@
                 <li class="nav-item"><a href="#tab-yourPlaylist" class="nav-link" data-bs-toggle="tab">Your Playlist</a>
                 </li>
             </ul>
-            <div class="tab-content overflow-auto">
+            <div class="tab-content ">
                 <!-- page all song -->
-                <div class="tab-pane active overflow-auto" id="tab-featured">
-                    <!-- <div id="test-add" class="row col-lg-6 col-sm-12 m-3 ms-0 bg-secondary align-items-center p-1 background-linear-song">
-                    <div id="numOfMusic" class="col-2 h3">04</div>
-                    <div class="col-7 d-flex">
-                        <img src="../images/ca-si-4.jpg" alt="" style="width: 50px;" class="border-img">
-                        <div class="ms-2">
-                            <h5>Anh luôn như vậy </h5>
-                            <small class="text-white">B-Ray</small>
+                <div class="tab-pane active" id="tab-featured">
+                    <div class="row">
+                        <div id="featured-song" class="col-lg-6 col-sm-12">
+                            
+                        </div>
+                        <div id="lyrics" class="col-lg-6 col-sm-12 mt-3 bg-dark visually-hidden" style="border-radius: 10px; height: 390px; overflow-y: auto;">
+                        </div>
+                        <div id="bio" class="col-lg-6 col-sm-12 visually-hidden">
                         </div>
                     </div>
-                    <div class="col-1">3:35</div>
-                    <div class="col-1">
-                        <a class="text-white" href="#">
-                            <i class="bi bi-play-circle"></i>
-                        </a>   
-                    </div>
-                    <div class="col-1">
-                        <a id="a-icon" class="text-white" href="#">
-                            <i class="bi bi-plus-square"></i>
-                        </a>   
-                    </div>
-                </div> -->
                 </div>
                 <!-- page top trending -->
-                <div class="tab-pane overflow-auto" id="tab-trending">
-
+                <div class="tab-pane" id="tab-trending">
+                    <div class="row">
+                        <div id="trending-song" class="col-lg-6 col-sm-12">
+                            
+                        </div>
+                        <div id="lyrics" class="col-lg-6 col-sm-12 visually-hidden">
+                        </div>
+                        <div id="bio" class="col-lg-6 col-sm-12 visually-hidden">
+                        </div>
+                    </div>
                 </div>
                 <!-- page new release -->
-                <div class="tab-pane overflow-auto" id="tab-release">
-
+                <div class="tab-pane" id="tab-release">
+                    <div class="row">
+                        <div id="release-song" class="col-lg-6 col-sm-12">
+                            
+                        </div>
+                        <div id="lyrics" class="col-lg-6 col-sm-12 visually-hidden">
+                        </div>
+                        <div id="bio" class="col-lg-6 col-sm-12 visually-hidden">
+                        </div>
+                    </div>
                 </div>
                 <!-- your playlist -->
-                <div class="tab-pane overflow-auto" id="tab-yourPlaylist">
-
+                <div class="tab-pane" id="tab-yourPlaylist">
+                    <div class="row">
+                        <div id="yourPlaylist-song" class="col-lg-6 col-sm-12">
+                            
+                        </div>
+                        <div id="lyrics" class="col-lg-6 col-sm-12 visually-hidden">
+                        </div>
+                        <div id="bio" class="col-lg-6 col-sm-12 visually-hidden">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,12 +130,12 @@
         <!-- start category -->
         <div class="category text-white fw-bolder">
             <!-- title -->
-            <h3 class="m-3 text-primary">Category</h3>
-            <hr style="background-color: whitesmoke; width: 80%; margin:20px auto; height: 3px;">
+            <h2 class="m-3 text-light">Category</h2>
+            <hr style="background-color: whitesmoke; width: 95%; margin:20px; height: 4px;">
             <!-- start card -->
-            <div id="category_row_1" class="row ms-5">
+            <div id="category_row_1" class="row ms-5 me-1">
             </div>
-            <div id="category_row_2" class="row ms-5">
+            <div id="category_row_2" class="row ms-5 me-1">
             </div>
             <!-- end card -->
         </div>
@@ -252,27 +264,38 @@
     </div>
     <!-- end footer -->
 
-    <div style="height: 300px;"></div>
-
     <!-- máy nghe nhạc -->
     <div class="fixed-bottom bg-dark py-1 visually-hidden" style="height: fit-content;" id="mayNgheNhac">
         <audio id="mySong" src="../Song/NauAnChoEm.mp3" index="0"></audio>
         <div class="row gy-1 justify-content-center w-75 m-auto">
 
             <div class="row-play-button row">
-                <div class="col d-flex justify-content-center">
+                <div class="col-lg-2 col-md-3 col-xs-4 d-flex justify-content-center">
+                    <!-- This area is for making the button row justify in center -->
+                </div>
+                <div class="col-lg-8 col-md-6 col-xs-4 d-flex justify-content-center">
+                    <button id="shuffle-btn" mode="unshuffle" class="btn btn-dark">
+                        <img id="shuffle-button" style="width: 20px; height: 25px; margin-top:8px" class="img-fluid" src="../Image/Music/shuffle.png" alt="">
+                    </button>
                     <button id="prev-btn" class="btn btn-dark">
                         <img style="width: 20px; height: 25px; transform: scaleX(-1); margin-top:8px" class="img-fluid" src="../Image/Music/next.png" alt="">
                     </button>
-                    <button id="playButton" class="btn btn-dark"
-                    >
+                    <button id="playButton" class="btn btn-dark">
                         <i style="margin-left: 5px" class="bi bi-play-fill h1"></i>
                     </button>
                     <button id="pauseButton" class="btn btn-dark visually-hidden">
                         <i style="margin-left: 5px" class="bi bi-pause h1"></i>
                     </button>
                     <button id="next-btn" class="btn btn-dark">
-                        <img style="width: 20px; height: 25px; margin-top:8px" class="img-fluid" src="../Image/Music/next.png" alt="">
+                        <img style="width: 20px; height: 25px; margin-top:8px" class="img-fluid" src="../Image/Music/next.png" alt="next">
+                    </button>
+                    <button id="repeat" mode="no" class="btn btn-dark">
+                        <img id="repeat-button" style="width: 20px; height: 25px; margin-top:8px" class="img-fluid" src="../Image/Music/repeat.png" alt="repeat">
+                    </button>
+                </div>
+                <div class="col-lg-2 col-md-3 col-xs-4 d-flex justify-content-center">
+                    <button id="lyrics-btn" mode="unshow" class="btn btn-dark">
+                        <img id="lyrics-button" style="width: 25px; height: 25px; margin-top:8px" class="img-fluid" src="../Image/Music/lyrics.png" alt="lyrics">
                     </button>
                 </div>
             </div>
@@ -316,6 +339,7 @@
         </div>
     </div>
 
+    <div id="footer-void" style="height: 160px;"></div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

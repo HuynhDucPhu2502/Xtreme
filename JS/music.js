@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var yourPlayList = [];
+    $("#footer-void").addClass("visually-hidden");
 
     $('.spinning-img').addClass('spin');
 
@@ -27,8 +28,8 @@ $(document).ready(function () {
         var nhac = listFeatured.find(x => x.tenNhac.toUpperCase() === tenNhac);
         if (nhac) {
             yourPlayList.push(nhac);
-            $("#tab-yourPlaylist").empty();
-            loadListSongPlayList(yourPlayList, "#tab-yourPlaylist");
+            $("#yourPlaylist-song").empty();
+            loadListSongPlayList(yourPlayList, "#yourPlaylist-song");
             alert("Thêm nhạc thành công");
         } else {
             alert("Không tìm thấy bài hát");
@@ -47,12 +48,12 @@ $(document).ready(function () {
     });
 
 
-    // loading nhac len cac tab ngoai tru tab your playlist
+    //loading nhac len cac tab ngoai tru tab your playlist
     function loadListSong(arr, id) {
         $(id).empty();  // Làm sạch nội dung hiện tại trước khi thêm mới
         for (var i = 0; i < arr.length; i++) {
             var songHtml =
-                '<div class="song row col-lg-6 col-sm-12 m-3 ms-0 bg-secondary align-items-center p-1 background-linear-song">' +
+                '<div class="song row col-12 m-3 ms-0 bg-secondary align-items-center p-1 background-linear-song">' +
                 '<div class="index-list col-2 h3">' + (i + 1) + '</div>' +
                 '<div class="col-7 d-flex">' +
                 '<img src="' + arr[i].img + '" alt="" style="width: 50px;" class="border-img">' +
@@ -77,11 +78,11 @@ $(document).ready(function () {
         }
     }
 
-    // load song len tab your playlist
+    //load song len tab your playlist
     function loadListSongPlayList(arr, id) {
         $(id).empty();
         arr.forEach(function (song, index) {
-            var songHtml = '<div class="song row col-lg-6 col-sm-12 m-3 ms-0 bg-secondary align-items-center p-1 background-linear-song">' +
+            var songHtml = '<div class="song row col-12 m-3 ms-0 bg-secondary align-items-center p-1 background-linear-song">' +
                 '<div class="index-list col-2 h3">' + (index + 1) + '</div>' +
                 '<div class="col-7 d-flex">' +
                 '<img src="' + song.img + '" alt="" style="width: 50px;" class="border-img">' +
@@ -129,11 +130,19 @@ $(document).ready(function () {
         { id: 4, img: "../Image/Music/ca-si-4.jpg", tenNhac: "Anh luôn như vậy", casi: "B-Ray", thoiluong: "3:35", src: "../Song/AnhLuonNhuVay.mp3" }
     ];
 
+    var record = [
+        {id: 1, url: "../Song/Lyrics/NauAnChoEm.txt" ,stamp: ["0:25","0:28","0:31","0:33","0:36","0:39","0:43","0:47","0:50","0:52","0:55","0:58","0:59","1:02","1:04","1:07","1:10","1:12","1:15","1:18","1:20","1:24","1:29","1:32","1:35","1:37","1:40","1:43","1:47","1:51","1:53","1:56","1:59","2:02","2:05","2:07","2:10","2:12","2:15","2:18","2:20","2:23","2:26","2:29","2:33","2:38","2:44","2:49","2:56","2:59","3:01","3:04","3:06","3:09","3:13","3:19","3:25","3:30","3:33","3:36","3:39","3:42","3:46","3:50","3:53","3:57"]},
+        {id: 2},
+        {id: 3},
+        {id: 4},
+        {id: 5}
+    ]
+
 
     // thuc hien load nhac len va load su kien
-    loadListSong(listFeatured, "#tab-featured");
-    loadListSong(listTrending, "#tab-trending");
-    loadListSong(listRelease, "#tab-release");
+    loadListSong(listFeatured, "#featured-song");
+    loadListSong(listTrending, "#trending-song");
+    loadListSong(listRelease, "#release-song");
 
     // load caregory
     function loadCategory(id, arr) {
@@ -171,32 +180,32 @@ $(document).ready(function () {
     var audio = $("#mySong").get(0); 
 
     //Biến cục bộ index_list dùng để lấy vị trí bài hát trên list nhạc ở mục "Featured".
-    var index_list;
+    var index_list = 0;
     
-    //Su kien load nhac len thanh dieu khien ben duoi cung
     $(document).on("click", ".play_song", function () {
-        var songIndex = $(this).attr("data-song-index"); 
-        index_list =  songIndex;
-        var songSrc = listFeatured[songIndex].src;
-        var img = listFeatured[songIndex].img;
-        
-        var audio_index = audio.index;
-        if(audio_index == undefined){
-            audio_index = 0;
-        }
-        var song = $(".index-list").eq(audio_index).closest('.song');
-        song.find(".play_song").empty();
-        song.find(".play_song").append('<i class="bi bi-play-circle"></i>');
-
-        var audioElement = $("#mySong")[0];              
-        audioElement.src = songSrc;
-        audioElement.index = songIndex;
-        updateNowPlaying(songIndex, img);
-
-        $("#playButton").removeClass("visually-hidden");
-        $("#pauseButton").addClass("visually-hidden");
-        $("#mayNgheNhac").removeClass("visually-hidden");
+        var songIndex = $(this).data("song-index");
+        var song = listFeatured[songIndex];
+        var audioElement = $("#mySong")[0];
+    
+        $(".play_song").html('<i class="bi bi-play-circle"></i>'); // Reset tất cả nút thành trạng thái chơi
+        $(this).html('<i class="bi bi-pause-circle"></i>'); // Thay đổi nút này thành trạng thái tạm dừng
+    
+        // Cập nhật nguồn audio và phát nhạc
+        audioElement.src = song.src;
+        audioElement.play();
+    
+        // Cập nhật thông tin hiển thị bài hát đang phát
+        updateNowPlaying(songIndex, song.img);
+    
+        $("#playButton").addClass("visually-hidden");
+        $("#pauseButton").removeClass("visually-hidden");
+        $("#mayNgheNhac").removeClass("visually-hidden"); 
+        $("#footer-void").removeClass("visually-hidden");
+    
+        index_list = songIndex;
     });
+
+
 
     function updateNowPlaying(songIndex, img) {
         // Lấy thông tin bài hát từ listFeatured dựa trên chỉ số
@@ -209,89 +218,228 @@ $(document).ready(function () {
         $("#author-img").attr('alt', song.casi);
     }
 
+    function changeSong(songIndex) {
+        if (songIndex < 0 || songIndex >= listFeatured.length) {
+            return;
+        }
+        
+        audio.src = listFeatured[songIndex].src;
+        audio.index = songIndex;
+        updateNowPlaying(songIndex, listFeatured[songIndex].img);
+    
+        audio.play();
+        updateButtonStates(songIndex);  
+    }
+
+    function updateButtonStates(songIndex) {
+        $(".play_song").html('<i class="bi bi-play-circle"></i>'); 
+        $(".index-list").eq(songIndex).closest('.song').find(".play_song").html('<i class="bi bi-pause-circle"></i>'); // Nút bài hát hiện tại thành pause
+    }
+
     // Xử lý khi nhấn nút play
     $("#playButton").click(function () {
-        if(index_list == undefined){
-            index_list = 0;
-        }
         audio.play();             
         $(this).addClass("visually-hidden");
         $("#pauseButton").removeClass("visually-hidden");
-        var song = $(" .index-list").eq(index_list).closest('.song');
-        song.find(".play_song").empty();
-        song.find(".play_song").append('<i class="bi bi-pause-circle"></i>');
+        updateButtonStates(index_list);
     });
 
-    // Xử lý khi nhấn nút pause
     $("#pauseButton").click(function () {
-        if(index_list == undefined){
-            index_list = 0;
-        }
         audio.pause();
         $(this).addClass("visually-hidden");
         $("#playButton").removeClass("visually-hidden");
-        var song = $(" .index-list").eq(index_list).closest('.song');
-        song.find(".play_song").empty();
-        song.find(".play_song").append('<i class="bi bi-play-circle"></i>');
+        updateButtonStates(index_list);
+    });
+    
+    $("#prev-btn").click(function() {
+        if (--index_list < 0) {
+            handleEndOfList();
+            return;
+        }
+
+        changeSong(index_list);
+    });
+    
+    $("#next-btn").click(function() {
+        if (++index_list == listFeatured.length) {
+            handleEndOfList();
+            return;
+        }
+
+        changeSong(index_list);
     });
 
-    //Xử lí khi nhấn nút prev
-    $("#prev-btn").on("click", function(){
-        var audioElement = $("#mySong")[0];              
-        var songIndex = audioElement.index;
-        songIndex--;
-        var song = $(" .index-list").eq(index_list).closest('.song');
-        song.find(".play_song").empty();
-        song.find(".play_song").append('<i class="bi bi-play-circle"></i>');
-        index_list--;
-        var songSrc = listFeatured[songIndex].src;  
-        var img = listFeatured[songIndex].img;
-        audioElement.src = songSrc;  
-        audioElement.index = songIndex;
-
-        updateNowPlaying(songIndex, img);
-
+    function handleEndOfList() {
+        hideMusicPlayer();
+        index_lis = 0;
+        audio.pause();
         $("#playButton").removeClass("visually-hidden");
         $("#pauseButton").addClass("visually-hidden");
-    })
+        $(".play_song").html('<i class="bi bi-play-circle"></i>');
+    }
 
-    //Xử lí khi nhấn nút next
-    $("#next-btn").on("click", function(){
-        var audioElement = $("#mySong")[0];              
-        var songIndex = audioElement.index;
-        if(songIndex == undefined){
-            songIndex = 0;
-        }
-        songIndex++;
-        var song = $(".index-list").eq(index_list).closest('.song');
-        song.find(".play_song").empty();
-        song.find(".play_song").append('<i class="bi bi-play-circle"></i>');
-        index_list++;
-        var songSrc = listFeatured[songIndex].src;  
-        var img = listFeatured[songIndex].img;
-        audioElement.src = songSrc;  
-        audioElement.index = songIndex;
 
-        updateNowPlaying(songIndex, img);
+    var mode = "no";
+    var lyrics_mode = "unshow"
+    var shuffle_mode = "unshuffle"
 
-        $("#playButton").removeClass("visually-hidden");
-        $("#pauseButton").addClass("visually-hidden");
-    })
-
-    // Cập nhật thời gian hiện tại và tiến trình khi audio đang phát
-    $(audio).on("timeupdate", function () {
+    $(audio).on("timeupdate", function() {
         var percentage = (audio.currentTime / audio.duration) * 100;
         $("#myProgressBar").css("width", percentage + "%");
         $("#currentTime").text(formatTime(audio.currentTime));
         $("#endTime").text(formatTime(audio.duration));
-
+    
         if (audio.currentTime == audio.duration) {
-            $("#mayNgheNhac").addClass("visually-hidden");
-            var song = $(" .index-list").eq(index_list).closest('.song');
-            song.find(".play_song").empty();
-            song.find(".play_song").append('<i class="bi bi-play-circle"></i>');
+            handleEndOfSong();
         }
     });
+    
+    function handleEndOfSong() {
+        if (mode === "one") {
+            audio.play();  // Play the same song again
+            clearLyrics();
+            importLyrics(index_list);  // Assuming importLyrics can take index to load lyrics
+        } else if (mode === "yes" && index_list === (listFeatured.length - 1)) {
+            playSongAtIndex(0);  // Start from the beginning of the playlist
+        } else {
+            playNextSong();
+        }
+    }
+    
+    function playSongAtIndex(index) {
+        if (index_list !== undefined && index_list !== index) {
+            var song = listFeatured[index];
+            audio.src = song.src;
+            audio.index = index;
+            index_list = index;
+    
+            updateNowPlaying(index, song.img);
+            audio.play();
+    
+            updateButtonStates(index);
+            showPlayerControls();
+        }
+    }
+    
+    function playNextSong() {
+        var nextIndex = index_list + 1;
+        if (nextIndex < listFeatured.length) {
+            playSongAtIndex(nextIndex);
+        } else {
+            $(".play_song").html('<i class="bi bi-play-circle"></i>');
+            hideMusicPlayer(); 
+        }
+    }
+    
+    function showPlayerControls() {
+        $("#playButton").addClass("visually-hidden");
+        $("#pauseButton").removeClass("visually-hidden");
+        $("#mayNgheNhac").removeClass("visually-hidden");
+        $("#footer-void").removeClass("visually-hidden");
+    }
+    
+    function hideMusicPlayer() {
+        $("#mayNgheNhac").addClass("visually-hidden");
+        $("#footer-void").addClass("visually-hidden");
+        $("#pauseButton").addClass("visually-hidden");
+        $("#playButton").removeClass("visually-hidden");
+    }
+    
+    function importLyrics(){
+        var index = 0;
+        $.ajax({
+            url: "../Song/Lyrics/NauAnChoEm.txt",
+            dataType: "text",
+            success: function(data){
+                var lines = data.split("\n")
+                lines.forEach(function(line){
+                    var source = '<p id="'+index+'" class="text-light text-start mt-3 fw-bold" '+
+                    'style="font-size: x-large;">'+line+'</p>';
+                    $("#lyrics").append(source)
+                    index++;
+                })
+            }
+        })
+    }
+
+    $("#lyrics-btn").on('click', function() {
+        lyrics_mode = $(this).attr("mode") === "show" ? "unshow" : "show";
+        $(this).attr("mode", lyrics_mode);
+    
+        if (lyrics_mode === "show") {
+            $("#lyrics").removeClass("visually-hidden");
+            $("#lyrics-button").attr("src", "../Image/Music/lyrics-active.png");
+            importLyrics(); 
+        } else {
+            $("#lyrics").addClass("visually-hidden");
+            $("#lyrics-button").attr("src", "../Image/Music/lyrics.png");
+        }
+    });
+
+    $("#shuffle-btn").on('click', function() {
+        shuffle_mode = $(this).attr("mode") === "shuffle" ? "unshuffle" : "shuffle";
+        $(this).attr("mode", shuffle_mode);
+    
+        var iconSrc = shuffle_mode === "shuffle" ? "../Image/Music/shuffle-active.png" : "../Image/Music/shuffle.png";
+        $("#shuffle-button").attr("src", iconSrc);
+    });
+
+    function clearLyrics(){
+        $("#lyrics").empty();
+    }
+    // "text-light text-start mt-3 fw-bold"
+
+
+    $(audio).on("timeupdate" , function (){
+        currentTime = formatTime(audio.currentTime);
+        for(i = 0; i < record[0].stamp.length; i++){
+            if(currentTime == record[0].stamp[i]){
+                for(j = 0; j <= i; j++){
+                    var id = '#'+j
+                    $(id).removeClass("text-light")
+                    $(id).addClass("text-warning")
+
+                    var scrollableDiv = $("#lyrics");
+                    var elementToScroll = $(id);
+                    // Calculate the middle of the scrollable div
+                    var middleOfDiv = scrollableDiv.height() / 2;
+
+                    // Calculate the position of the element relative to the scrollable div
+                    var elementOffset = elementToScroll.offset().top - scrollableDiv.offset().top;
+
+                    // Calculate the scroll position to center the element
+                    var scrollPosition = scrollableDiv.scrollTop() + elementOffset - middleOfDiv + (elementToScroll.height() / 2);
+
+                    // Scroll the scrollable div to the middle of the element
+                    scrollableDiv.scrollTop(scrollPosition);
+                }
+                for(k = i+1; k < record[0].stamp.length; k++){
+                    var id = '#'+k
+                    $(id).addClass("text-light")
+                    $(id).removeClass("text-warning")
+                }
+                break;
+            }
+        }
+    })
+
+    $("#repeat").on("click", function(){
+        mode = $(this).attr("mode")
+
+        if(mode == "no"){
+            $(this).attr("mode", "yes")
+            mode = "yes";
+            $("#repeat-button").attr("src", "../Image/Music/repeat-active.png")
+        }else if(mode == "yes"){
+            $(this).attr("mode", "one")
+            mode = "one";
+            $("#repeat-button").attr("src", "../Image/Music/repeat-one.png")
+        }else if(mode == "one"){
+            $(this).attr("mode", "no");
+            mode = "no";
+            $("#repeat-button").attr("src", "../Image/Music/repeat.png")
+        }
+    })
 
     // Điều chỉnh âm lượng
     $("#volumeSlider").on("input", function () {
